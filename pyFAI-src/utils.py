@@ -354,7 +354,7 @@ def averageDark(lstimg, center_method="mean", cutoff=None):
         length = len(lstimg)
         if length==1:
             return lstimg.astype(numpy.float32)
-        stack = numpy.zeros((length, shape[0], shape[1]), dtype=float32)
+        stack = numpy.zeros((length, shape[0], shape[1]), dtype=numpy.float32)
         for i, img in enumerate(lstimg):
            stack[i] = img
     center = stack.__getattribute__(center_method)(axis=0)
